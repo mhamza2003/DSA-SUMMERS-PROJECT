@@ -28,7 +28,7 @@ public:
 
 
 
-// Priority Queue Node Structure
+// Priority Queue Node
 class PriorityNode 
 {
 public:
