@@ -135,7 +135,7 @@ public:
 
     void scheduleAppointment(Patient* patient) 
     {
-        if (patient->isScheduled) return; // Skip if already scheduled
+        if (patient->isScheduled) return; 
 
         PriorityNode* newNode = new PriorityNode(patient);
 
@@ -157,7 +157,7 @@ public:
             temp->Next = newNode;
         }
 
-        patient->isScheduled = true; // Mark the patient as scheduled
+        patient->isScheduled = true; 
     }
 
     void displayPatients() 
@@ -204,14 +204,14 @@ public:
 
     void scheduleAppointments() 
     {
-        // First, schedule all emergency cases from the stack
+      
         Patient* emergencyPatient;
         while ((emergencyPatient = popEmergencyPatient()) != NULL) 
         {
             scheduleAppointment(emergencyPatient);
         }
 
-        // Then, schedule all regular patients
+      
         Patient* temp = head;
 
         while (temp) 
